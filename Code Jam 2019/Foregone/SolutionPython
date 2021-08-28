@@ -1,0 +1,14 @@
+cases = int(input())
+for a in range(cases):
+	n = int(input())
+	st = str(n)
+	lst = list(st)
+	out = 0
+	for x in lst:
+		if x == '4':
+			y = len(st) - st.index('4') - 1
+			z = 1 * (10 ** y)
+			n = n - z
+			st = str(n)
+			out = out + z
+	print("Case #" + str(a+1) + ": " + str(out) + " " + str(n))
