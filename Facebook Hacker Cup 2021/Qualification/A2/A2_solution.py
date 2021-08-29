@@ -1,3 +1,7 @@
+def final_paths(trans, paths):
+    temp = paths.copy()
+
+
 def turns(line, trans, common):
     result = []
     print(common)
@@ -6,28 +10,11 @@ def turns(line, trans, common):
         temp = []
         temp.append(a)
         paths.append(temp)
-        count = 0
-        for x in trans:
-            if temp[-1] == x[1]:
-                count = count + 1
-        for x in range(count-1):
-            paths.append(temp)
-        
-        for current in paths:
-            for x in trans:
-                if x[1] == current[-1]:
-                    current.append(x[0])
-        print(paths)
-            # count = 0
-            # for current in paths:
-            #     if x[1] == current[-1]:
-            #         if count == 0:
-            #             current.append(x[0])
-            #             count = count + 1
-            #         else:
-            #             print("yeet")
-            #             paths.append(current)
-        #print(paths)
+
+        all_paths = final_paths(trans, paths)
+        print(all_paths)
+
+
 
 def possible(line, trans):
     all_combin = []
