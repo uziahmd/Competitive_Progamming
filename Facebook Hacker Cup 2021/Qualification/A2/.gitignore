@@ -1,2 +1,3 @@
 .vscode
-A2_solution.exe
+*.exe
+!spec/*.exe
